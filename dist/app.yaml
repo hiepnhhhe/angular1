@@ -1,0 +1,13 @@
+runtime: nodejs12
+
+handlers:
+- url: /
+  static_files: frontend/index.html
+  upload: frontend/index.html
+
+- url: /
+  static_dir: frontend
+
+- url: /(.*)
+  static_files: frontend/index.html
+  upload: frontend/index.html
